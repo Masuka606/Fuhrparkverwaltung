@@ -1,0 +1,2 @@
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.csprojAssemblyReference.cache
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.csproj.CoreCompileInputs.cache
