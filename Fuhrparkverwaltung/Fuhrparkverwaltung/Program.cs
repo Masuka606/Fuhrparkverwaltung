@@ -11,7 +11,12 @@ namespace Fuhrparkverwaltung
         static void Main(string[] args)
         {
 
+            Fahrzeug[] alleFahrzeuge = new Fahrzeug[3];
 
+
+            
+
+            //alleFahrzeuge[0] = new PKW("Audi", "RS6+", "K-BB-1298", 1980-07-05, );
         }
     }
 }

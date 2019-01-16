@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Fuhrparkverwaltung
 {
+
+    //Enum für Schadstoffklasse
     enum Schadstoffklasse
     {
         Schadstoffarm,

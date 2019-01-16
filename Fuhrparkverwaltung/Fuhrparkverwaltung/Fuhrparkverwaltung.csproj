@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Fahrzeug.cs" />
     <Compile Include="LKW.cs" />
+    <Compile Include="Methoden.cs" />
     <Compile Include="Motorräder.cs" />
     <Compile Include="Parkhaus.cs" />
     <Compile Include="PKW.cs" />

@@ -1,2 +1,7 @@
 C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.csprojAssemblyReference.cache
 C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.csproj.CoreCompileInputs.cache
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.exe.config
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.exe
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.pdb
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.exe
+C:\Users\A13A3AE\source\repos\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.pdb
