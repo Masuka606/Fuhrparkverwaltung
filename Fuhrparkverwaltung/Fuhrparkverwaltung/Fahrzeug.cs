@@ -30,8 +30,14 @@ namespace Fuhrparkverwaltung
         //Polymorphe Methode
         public virtual void PrintAllData()
         {
+            Console.WriteLine("");
+            Console.WriteLine("Hersteller: \t\t{0}\nModell: \t\t{1}\nKennzeichen: \t\t{2}\nJahr der Erstzulassung: {3}\nAnschaffungspreis: \t{4}\nStellplatz: \t\t{5}", this.hersteller, this.modell, this.kennzeichen, this.jahrDerErstzulassung, this.anschaffungspreis, this.stellplatz);
+        }
 
-            Console.WriteLine("Hersteller: {0}\n Modell: {1}\n Kennzeichen: {2}\n Jahr der Erstzulassung: {3}\n Anschaffungspreis: {4}\n, Stellplatz: {5}\n", this.hersteller, this.modell, this.kennzeichen, this.jahrDerErstzulassung, this.anschaffungspreis, this.stellplatz);
+
+        public virtual void SteuerschuldfürKennzeichen(List<Fahrzeug> alleFahrzeuge, string kennzeichen)
+        {
+
         }
 
         //Getter & Setter

@@ -44,8 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fahrzeug.cs" />
+    <Compile Include="Fahrzeugtyp.cs" />
     <Compile Include="LKW.cs" />
-    <Compile Include="Methoden.cs" />
+    <Compile Include="Parkplatz.cs" />
+    <Compile Include="Parkplatztyp.cs" />
+    <Compile Include="Verwaltung.cs" />
     <Compile Include="Motorräder.cs" />
     <Compile Include="Parkhaus.cs" />
     <Compile Include="PKW.cs" />

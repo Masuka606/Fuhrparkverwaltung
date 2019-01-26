@@ -8,9 +8,15 @@ namespace Fuhrparkverwaltung
 {
     class Parkhaus
     {
-        int Parkhausnummer;
-        //Hier haben wir noch Arbeit vor uns
-        //int[]
+        private Parkplatz[] Parkplätze;
+        private string ParkhauName;
+        private int ParkhausNummer;
 
+        public Parkhaus(Parkplatz[] parkplätze, string parkhauName, int parkhausNummer)
+        {
+            Parkplätze = parkplätze;
+            ParkhauName = parkhauName;
+            ParkhausNummer = parkhausNummer;
+        }
     }
 }

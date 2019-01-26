@@ -21,7 +21,7 @@ namespace Fuhrparkverwaltung
         public override void PrintAllData()
         {
             base.PrintAllData();
-            Console.WriteLine("Hubraum: {0}\n", this.hubraum);
+            Console.WriteLine("Hubraum: \t\t{0}\n", this.hubraum);
         }
 
         //Getter & Setter

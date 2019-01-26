@@ -21,12 +21,16 @@ namespace Fuhrparkverwaltung
             this.leistung = leistung;
             this.schadstoffklasse = schadstoffklasse;
         }
+
         //Polymorphe Methode
         public override void PrintAllData()
         {
             base.PrintAllData();
-            Console.WriteLine("Hubraum: {0}\n, Leistung: {1}\n, Schadstoffklasse: {2}\n", this.hubraum, this.leistung, this.schadstoffklasse);
+            Console.WriteLine("Hubraum: \t\t{0}\nLeistung: \t\t{1}\nSchadstoffklasse: \t{2}\n", this.hubraum, this.leistung, this.schadstoffklasse);
         }
+
+
+
 
         //Getter & Setter
         public int Hubraum { get => hubraum; set => hubraum = value; }
