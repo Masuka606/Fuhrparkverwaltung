@@ -103,6 +103,7 @@ namespace Fuhrparkverwaltung
                 EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 10 * (SchadstoffklassenKosten + 1);
                 Steuerschuld = Steuerschuld + EineSteuerschuld;
                 EineSteuerschuld = 0;
+                Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
             }
 
             foreach (LKW fahrzeug in alleFahrzeuge.OfType<LKW>())
@@ -111,6 +112,7 @@ namespace Fuhrparkverwaltung
 
                 Steuerschuld = Steuerschuld + EineSteuerschuld;
                 EineSteuerschuld = 0;
+                Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
             }
 
             foreach (Motorräder fahrzeug in alleFahrzeuge.OfType<Motorräder>())
@@ -118,10 +120,11 @@ namespace Fuhrparkverwaltung
                 EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 20;
                 Steuerschuld = Steuerschuld + EineSteuerschuld;
                 EineSteuerschuld = 0;
+                Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
             }
 
 
-            Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+           // Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
         }
 
 
