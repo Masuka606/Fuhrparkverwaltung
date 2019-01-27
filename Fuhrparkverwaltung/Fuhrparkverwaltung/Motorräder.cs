@@ -11,7 +11,7 @@ namespace Fuhrparkverwaltung
         //Private Konstruktoren
         private int hubraum;
 
-        //Konstruktor
+        //Konstruktor (erweitert den Standard Konstruktor
         public Motorräder(string hersteller, string modell, string kennzeichen, DateTime jahrDerErstzulassung, float anschaffungspreis, int stellplatz, int hubraum) : base(hersteller, modell, kennzeichen, jahrDerErstzulassung, anschaffungspreis, stellplatz)
         {
             this.hubraum = hubraum;
@@ -24,6 +24,7 @@ namespace Fuhrparkverwaltung
             Console.WriteLine("Hubraum: \t\t{0}\n", this.hubraum);
         }
 
+        // Erweitert die Funktion für die Steuerschuld
         public override void SteuerschuldfürKennzeichen()
         {
             base.SteuerschuldfürKennzeichen();
@@ -37,7 +38,7 @@ namespace Fuhrparkverwaltung
             EineSteuerschuld = (HubraumSteuer) / 100 * 20;
             Steuerschuld = Steuerschuld + EineSteuerschuld;
             EineSteuerschuld = 0;
-            Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1}\n", this.Kennzeichen, Steuerschuld);
+            Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1} Euro \n", this.Kennzeichen, Steuerschuld);
 
 
         }

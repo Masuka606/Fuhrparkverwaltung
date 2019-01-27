@@ -13,7 +13,7 @@ namespace Fuhrparkverwaltung
         private int leistung;
         private Schadstoffklasse schadstoffklasse;
 
-        //Konstruktor
+        //Konstruktor (erweitert den Standard Konstruktor)
         public PKW(string hersteller, string modell, string kennzeichen, DateTime jahrDerErstzulassung, float anschaffungspreis, int stellplatz, int hubraum, int leistung, Schadstoffklasse schadstoffklasse)
             :base(hersteller, modell, kennzeichen, jahrDerErstzulassung, anschaffungspreis, stellplatz)
         {
@@ -29,6 +29,7 @@ namespace Fuhrparkverwaltung
             Console.WriteLine("Hubraum: \t\t{0}\nLeistung: \t\t{1}\nSchadstoffklasse: \t{2}\n", this.hubraum, this.leistung, this.schadstoffklasse);
         }
 
+        // Überschreibt die Funktion aus der Fahrzeugklasse
         public override void SteuerschuldfürKennzeichen()
         {
             base.SteuerschuldfürKennzeichen();
@@ -36,7 +37,7 @@ namespace Fuhrparkverwaltung
             double Steuerschuld = 0;
             double EineSteuerschuld = 0;
             int SchadstoffklassenKosten = 0;
-            double HubraumSteuer = 0;
+            double HubraumSteuer = 0; //muss Double sein, sonst kommt es zu schwerwiegenden Rundungsfehlern
             //Schadstoffklassenkosten
             if (this.Schadstoffklasse == Schadstoffklasse.Schadstoffarm)
                 {
@@ -57,7 +58,7 @@ namespace Fuhrparkverwaltung
                 EineSteuerschuld = HubraumSteuer / 100 * 10 * (SchadstoffklassenKosten + 1);
                 Steuerschuld = Steuerschuld + EineSteuerschuld;
                 EineSteuerschuld = 0;
-                Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1}\n", this.Kennzeichen, Steuerschuld);
+                Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1} Euro \n", this.Kennzeichen, Steuerschuld);
             
         }
 

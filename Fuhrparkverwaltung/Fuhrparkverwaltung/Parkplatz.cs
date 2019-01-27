@@ -8,6 +8,7 @@ namespace Fuhrparkverwaltung
 {
     class Parkplatz
     {
+        //Klasse für Parkplätze
         
         private int parkplatznummer;
         private Parkplatztyp parkplatztyp;

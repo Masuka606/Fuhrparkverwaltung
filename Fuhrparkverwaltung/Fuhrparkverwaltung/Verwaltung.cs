@@ -45,7 +45,7 @@ namespace Fuhrparkverwaltung
 
         }
 
-
+        //Funktion zur Ausgabe der Daten eines bestimmten Fahrzeugs, durch einfache Prüfung des Kennzeichen-strings
         public static void GebeAlleDatenEinesKennzeichensAus(List<Fahrzeug> alleFahrzeuge, string kennzeichen)
         {
             foreach (Fahrzeug fahrzeug in alleFahrzeuge)
@@ -71,17 +71,9 @@ namespace Fuhrparkverwaltung
 
         public static void BerechneSteuerschuld(List<Fahrzeug> alleFahrzeuge)
         {
-            double Steuerschuld = 0;
-            double EineSteuerschuld = 0;
-            int SchadstoffklassenKosten = 0;
+           
 
-            //foreach(Fahrzeug fahrzeug in alleFahrzeuge.OfType<PKW>)
-            //{
-            //    fahrzeug.GetType();
-            //    //if (fahrzeug.GetType() );
-            //}
-
-            //List<PKW> PKWListe = 
+            
             
 
 
@@ -90,49 +82,25 @@ namespace Fuhrparkverwaltung
             {
 
                 fahrzeug.SteuerschuldfürKennzeichen();
-                //Schadstoffklassenkosten
-                //if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Schadstoffarm)
-                //{
-                //    SchadstoffklassenKosten = 0;
-                //}
-                //if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Normal)
-                //{
-                //    SchadstoffklassenKosten = 1;
-                //}
-                //if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Diesel)
-                //{
-                //    SchadstoffklassenKosten = 2;
-                //}
-
-                //EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 10 * (SchadstoffklassenKosten + 1);
-                //Steuerschuld = Steuerschuld + EineSteuerschuld;
-                //EineSteuerschuld = 0;
-                //Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+               
             }
 
             foreach (LKW fahrzeug in alleFahrzeuge.OfType<LKW>())
             {
 
                 fahrzeug.SteuerschuldfürKennzeichen();
-                //EineSteuerschuld = fahrzeug.ZuladungInTonnen * 100 / 1000;
-
-                //Steuerschuld = Steuerschuld + EineSteuerschuld;
-                //EineSteuerschuld = 0;
-                //Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+               
             }
 
             foreach (Motorräder fahrzeug in alleFahrzeuge.OfType<Motorräder>())
             {
 
                 fahrzeug.SteuerschuldfürKennzeichen();
-                //EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 20;
-                //Steuerschuld = Steuerschuld + EineSteuerschuld;
-                //EineSteuerschuld = 0;
-                //Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+               
             }
 
 
-           // Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+           
         }
 
 
@@ -146,7 +114,7 @@ namespace Fuhrparkverwaltung
 
 
                     fahrzeug.SteuerschuldfürKennzeichen();
-                        //Verwaltung.BerechneSteuerschuld(alleFahrzeuge);
+                       
                 }
             }
         }
@@ -156,7 +124,9 @@ namespace Fuhrparkverwaltung
 
 
 
-
+        // Funktion zum hinzufügen weiterer Fahrzeuge
+        // Erst wird die Angabe des Typs gefordert und dann darauf hin ein entsprechendes neues Fahrzeug Objekt vom angegebenen Typ erstellt
+        // Danach wird man aufgefordert die benötigten Daten anzugeben
         public static void addNewFahrzeug(List<Fahrzeug> alleFahrzeuge, Parkplatz[] Parkplätze)
         {
             bool fahrzeugAngelegt = false;
@@ -167,9 +137,10 @@ namespace Fuhrparkverwaltung
                     //Initialisierung des Enums mit einem Defaultwert
                     Fahrzeugtyp einFahrzeugtyp = Fahrzeugtyp.Default;
 
-                    Console.WriteLine("Geben Sie bitte den gewünschten Fahrzeugtyp ein: \nPKW \nLKW\nMotorrad");
+                    Console.WriteLine("Geben Sie bitte den gewünschten Fahrzeugtyp ein: \nPKW \nLKW\nMotorrad\n");
                     string fahrzeugtyp = Convert.ToString(Console.ReadLine());
                     fahrzeugtyp = fahrzeugtyp.ToLower();
+                    // Prüfung des gewünschten Fahrzeugtyps und anlegen eines neuen Objektes des gewünschten Typs
                     if (fahrzeugtyp != "pkw" && fahrzeugtyp != "lkw" && fahrzeugtyp != "motorrad")
                     {
                         throw new Exception();
@@ -186,7 +157,7 @@ namespace Fuhrparkverwaltung
                     {
                         einFahrzeugtyp = Fahrzeugtyp.Motorrad;
                     }
-                    
+                    // Frage nach den Daten die für alle Fahrzeugtypen gebraucht werden
                     Console.WriteLine("Geben Sie bitte den Hersteller an:");
                     string hersteller = Convert.ToString(Console.ReadLine());
 
@@ -210,7 +181,8 @@ namespace Fuhrparkverwaltung
                         throw new Exception();
                     }
                     
-                    //Parkplatzabfrage
+                    //Parkplatzabfrage 
+                    // Hier wird sowohl geprüft, ob der Parkplatz für das Fahrzeug kompatibel ist, sowie ob der Parkplatz frei ist
                     bool ParkplatzFrei = false;
                     bool ParkplatztypPasst = false;
                     int ParkplatzGewünscht;
@@ -250,7 +222,8 @@ namespace Fuhrparkverwaltung
                             }
 
                     }while(ParkplatzFrei != true || ParkplatztypPasst != true);
-
+                    
+                    //Hier wird nach den Fahrzeugtyp spezifischen Daten gefragt
                     switch (fahrzeugtyp)
                     {
                         case "pkw":

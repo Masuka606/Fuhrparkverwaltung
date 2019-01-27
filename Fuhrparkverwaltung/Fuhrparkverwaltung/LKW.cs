@@ -12,7 +12,7 @@ namespace Fuhrparkverwaltung
         private int anzahlAchsen;
         private float zuladungInTonnen;
 
-        //Konstruktor
+        //Konstruktor Erweitert den Standard Konstruktur
         public LKW(string hersteller, string modell, string kennzeichen, DateTime jahrDerErstzulassung, float anschaffungspreis, int stellplatz, int anzahlAchsen, float zuladungInTonnen) : base(hersteller, modell, kennzeichen, jahrDerErstzulassung, anschaffungspreis, stellplatz)
         {
             this.anzahlAchsen = anzahlAchsen;
@@ -23,7 +23,7 @@ namespace Fuhrparkverwaltung
         public override void PrintAllData()
         {
             base.PrintAllData();
-            Console.WriteLine("Anzahl der Achsen: \t{0}\nZuladung in Tonnen: \t{1}\n", this.anzahlAchsen, this.zuladungInTonnen);
+            Console.WriteLine("Anzahl der Achsen: \t{0}\nZuladung in Tonnen: \t{1} \n", this.anzahlAchsen, this.zuladungInTonnen);
         }
 
         public override void SteuerschuldfürKennzeichen()
@@ -34,11 +34,11 @@ namespace Fuhrparkverwaltung
             double EineSteuerschuld = 0;
             int SchadstoffklassenKosten = 0;
 
-            EineSteuerschuld = this.ZuladungInTonnen * 100 ;
+            EineSteuerschuld = this.ZuladungInTonnen * 100 / 1000 ;
 
             Steuerschuld = Steuerschuld + EineSteuerschuld;
             EineSteuerschuld = 0;
-            Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1}\n", this.Kennzeichen, Steuerschuld);
+            Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1} Euro / t\n", this.Kennzeichen, Steuerschuld);
         }
 
         //Getter & Setter

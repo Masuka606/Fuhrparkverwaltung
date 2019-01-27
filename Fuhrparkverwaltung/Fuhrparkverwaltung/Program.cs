@@ -42,7 +42,7 @@ namespace Fuhrparkverwaltung
 
 
 
-
+            // Anlegen von drei schon vorhandenen Fahrzeugen mit Daten (jeder Typ einmal)
 
 
             alleFahrzeuge.Add(new PKW("Audi", "RS6+", "K-BB-2000", new DateTime(2018, 1, 1), 180000, 1, 5400, 640, Schadstoffklasse.Normal));
@@ -53,7 +53,7 @@ namespace Fuhrparkverwaltung
 
             bool running = true;
             //Do While draus machen
-
+            // Angezeigtes Optionen Menü 
             do {
 
 
@@ -71,7 +71,7 @@ namespace Fuhrparkverwaltung
 
                 int Auswahlmenu = Convert.ToInt32(Console.ReadLine());
 
-
+                //Abfrage nach was gemacht werden soll
                 switch (Auswahlmenu)
                 {
                     case 1:

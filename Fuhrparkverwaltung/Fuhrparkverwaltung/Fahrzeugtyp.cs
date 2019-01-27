@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Fuhrparkverwaltung
 {
+    //Die möglichen Fahrzeugtypen
     enum Fahrzeugtyp
     {
         PKW,

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace Fuhrparkverwaltung
 {
+
+    // Parkplatz Typen für die verschiedenen Fahrzeugtypen
     enum Parkplatztyp
     {
         PKW,
