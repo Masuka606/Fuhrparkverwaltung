@@ -71,8 +71,8 @@ namespace Fuhrparkverwaltung
 
         public static void BerechneSteuerschuld(List<Fahrzeug> alleFahrzeuge)
         {
-           
-
+            double SteuerschuldG = 0;
+            double Steuerschuldgesamt = 0;
             
             
 
@@ -81,24 +81,33 @@ namespace Fuhrparkverwaltung
             foreach (PKW fahrzeug in alleFahrzeuge.OfType<PKW>())
             {
 
-                fahrzeug.SteuerschuldfürKennzeichen();
+             //   fahrzeug.SteuerschuldfürKennzeichen();
+                SteuerschuldG = fahrzeug.SteuerschuldfürKennzeichen();
+                Steuerschuldgesamt = Steuerschuldgesamt + SteuerschuldG;
                
             }
 
             foreach (LKW fahrzeug in alleFahrzeuge.OfType<LKW>())
             {
 
-                fahrzeug.SteuerschuldfürKennzeichen();
-               
+                
+              //  fahrzeug.SteuerschuldfürKennzeichen();
+                SteuerschuldG = fahrzeug.SteuerschuldfürKennzeichen();
+                SteuerschuldG = SteuerschuldG * fahrzeug.ZuladungInTonnen;
+                Steuerschuldgesamt = Steuerschuldgesamt + SteuerschuldG;
+
             }
 
             foreach (Motorräder fahrzeug in alleFahrzeuge.OfType<Motorräder>())
             {
 
-                fahrzeug.SteuerschuldfürKennzeichen();
-               
+               // fahrzeug.SteuerschuldfürKennzeichen();
+                SteuerschuldG = fahrzeug.SteuerschuldfürKennzeichen();
+                Steuerschuldgesamt = Steuerschuldgesamt + SteuerschuldG;
+
             }
 
+            Console.WriteLine("Die gesamte Steuerschuld beträgt: {0}\n", Steuerschuldgesamt);
 
            
         }

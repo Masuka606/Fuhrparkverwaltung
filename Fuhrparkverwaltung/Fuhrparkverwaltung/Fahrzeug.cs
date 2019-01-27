@@ -39,8 +39,10 @@ namespace Fuhrparkverwaltung
         }
 
         //Funktion zur Berechnung der Steuerschuld der Fahrzeuge. Wird auch in den entsprechenden Klassen erweitert (hier ja leer) muss aber hier sein, damit diese einfach aufgerufen werden kann
-        public virtual void SteuerschuldfürKennzeichen()
+        public virtual double SteuerschuldfürKennzeichen()
         {
+            double SteuerschuldG = 0;
+            return SteuerschuldG;
             //double Steuerschuld = 0;
             //double EineSteuerschuld = 0;
             //int SchadstoffklassenKosten = 0;

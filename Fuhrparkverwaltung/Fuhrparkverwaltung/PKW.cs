@@ -30,10 +30,11 @@ namespace Fuhrparkverwaltung
         }
 
         // Überschreibt die Funktion aus der Fahrzeugklasse
-        public override void SteuerschuldfürKennzeichen()
+        public override double SteuerschuldfürKennzeichen()
         {
             base.SteuerschuldfürKennzeichen();
 
+            double SteuerschuldG = 0;
             double Steuerschuld = 0;
             double EineSteuerschuld = 0;
             int SchadstoffklassenKosten = 0;
@@ -59,6 +60,8 @@ namespace Fuhrparkverwaltung
                 Steuerschuld = Steuerschuld + EineSteuerschuld;
                 EineSteuerschuld = 0;
                 Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1} Euro \n", this.Kennzeichen, Steuerschuld);
+            SteuerschuldG = Steuerschuld;
+            return SteuerschuldG;
             
         }
 

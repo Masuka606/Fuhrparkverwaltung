@@ -26,10 +26,11 @@ namespace Fuhrparkverwaltung
             Console.WriteLine("Anzahl der Achsen: \t{0}\nZuladung in Tonnen: \t{1} \n", this.anzahlAchsen, this.zuladungInTonnen);
         }
 
-        public override void SteuerschuldfürKennzeichen()
+        public override double SteuerschuldfürKennzeichen()
         {
             base.SteuerschuldfürKennzeichen();
 
+            double SteuerschuldG = 0;
             double Steuerschuld = 0;
             double EineSteuerschuld = 0;
             int SchadstoffklassenKosten = 0;
@@ -38,7 +39,9 @@ namespace Fuhrparkverwaltung
 
             Steuerschuld = Steuerschuld + EineSteuerschuld;
             EineSteuerschuld = 0;
+            SteuerschuldG = Steuerschuld;
             Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1} Euro / t\n", this.Kennzeichen, Steuerschuld);
+            return SteuerschuldG;
         }
 
         //Getter & Setter
