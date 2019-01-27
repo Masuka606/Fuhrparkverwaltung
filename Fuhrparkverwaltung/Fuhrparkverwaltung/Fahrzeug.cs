@@ -16,7 +16,6 @@ namespace Fuhrparkverwaltung
         private string kennzeichen;
         private DateTime jahrDerErstzulassung;
         private float anschaffungspreis;
-      
         private int stellplatz;
 
         //Konstruktor 
@@ -29,6 +28,8 @@ namespace Fuhrparkverwaltung
             this.anschaffungspreis = anschaffungspreis;
             this.stellplatz = stellplatz;
             
+           
+
         }
         //Polymorphe Methode zur Anzeige der Daten, wird in den entsprechenden "Fahrzeugtyp"-Klassen erweitert um die entsprechenden zusätzlichen Daten
         public virtual void PrintAllData()
