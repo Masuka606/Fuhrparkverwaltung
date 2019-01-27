@@ -24,6 +24,24 @@ namespace Fuhrparkverwaltung
             Console.WriteLine("Hubraum: \t\t{0}\n", this.hubraum);
         }
 
+        public override void SteuerschuldfürKennzeichen()
+        {
+            base.SteuerschuldfürKennzeichen();
+
+            double Steuerschuld = 0;
+            double EineSteuerschuld = 0;
+            int SchadstoffklassenKosten = 0;
+            double HubraumSteuer = 0;
+
+            HubraumSteuer = this.Hubraum + 99;
+            EineSteuerschuld = (HubraumSteuer) / 100 * 20;
+            Steuerschuld = Steuerschuld + EineSteuerschuld;
+            EineSteuerschuld = 0;
+            Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1}\n", this.Kennzeichen, Steuerschuld);
+
+
+        }
+
         //Getter & Setter
         public int Hubraum { get => hubraum; set => hubraum = value; }
     }

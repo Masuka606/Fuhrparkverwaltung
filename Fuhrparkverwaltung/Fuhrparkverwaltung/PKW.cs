@@ -29,7 +29,37 @@ namespace Fuhrparkverwaltung
             Console.WriteLine("Hubraum: \t\t{0}\nLeistung: \t\t{1}\nSchadstoffklasse: \t{2}\n", this.hubraum, this.leistung, this.schadstoffklasse);
         }
 
+        public override void SteuerschuldfürKennzeichen()
+        {
+            base.SteuerschuldfürKennzeichen();
 
+            double Steuerschuld = 0;
+            double EineSteuerschuld = 0;
+            int SchadstoffklassenKosten = 0;
+            double HubraumSteuer = 0;
+            //Schadstoffklassenkosten
+            if (this.Schadstoffklasse == Schadstoffklasse.Schadstoffarm)
+                {
+                    SchadstoffklassenKosten = 0;
+                }
+                if (this.Schadstoffklasse == Schadstoffklasse.Normal)
+                {
+                    SchadstoffklassenKosten = 1;
+                }
+                if (this.Schadstoffklasse == Schadstoffklasse.Diesel)
+                {
+                    SchadstoffklassenKosten = 2;
+                }
+
+            HubraumSteuer = this.Hubraum + 99;
+           
+            
+                EineSteuerschuld = HubraumSteuer / 100 * 10 * (SchadstoffklassenKosten + 1);
+                Steuerschuld = Steuerschuld + EineSteuerschuld;
+                EineSteuerschuld = 0;
+                Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1}\n", this.Kennzeichen, Steuerschuld);
+            
+        }
 
 
         //Getter & Setter

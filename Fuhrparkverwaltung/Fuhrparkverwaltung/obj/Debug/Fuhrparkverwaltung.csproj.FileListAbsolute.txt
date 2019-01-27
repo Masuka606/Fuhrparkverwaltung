@@ -12,3 +12,10 @@ C:\Users\A13A3AE\Desktop\Fuhrparkverwaltung-master\Fuhrparkverwaltung\Fuhrparkve
 C:\Users\A13A3AE\Desktop\Fuhrparkverwaltung-master\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.exe.config
 C:\Users\A13A3AE\Desktop\Fuhrparkverwaltung-master\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.exe
 C:\Users\A13A3AE\Desktop\Fuhrparkverwaltung-master\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.pdb
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.exe.config
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.exe
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\bin\Debug\Fuhrparkverwaltung.pdb
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.csprojAssemblyReference.cache
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.csproj.CoreCompileInputs.cache
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.exe
+E:\Lukas\Git-Repos\Fuhrparkverwaltung\Fuhrparkverwaltung\Fuhrparkverwaltung\obj\Debug\Fuhrparkverwaltung.pdb

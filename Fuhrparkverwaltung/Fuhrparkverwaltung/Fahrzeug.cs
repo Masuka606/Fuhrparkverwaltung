@@ -35,9 +35,11 @@ namespace Fuhrparkverwaltung
         }
 
 
-        public virtual void SteuerschuldfürKennzeichen(List<Fahrzeug> alleFahrzeuge, string kennzeichen)
+        public virtual void SteuerschuldfürKennzeichen()
         {
-
+            //double Steuerschuld = 0;
+            //double EineSteuerschuld = 0;
+            //int SchadstoffklassenKosten = 0;
         }
 
         //Getter & Setter

@@ -8,6 +8,8 @@ namespace Fuhrparkverwaltung
 {
     class Verwaltung
     {
+      
+
         public static void AusgabeAllerDaten(List<Fahrzeug> alleFahrzeuge)
         {
             Console.WriteLine("\n\nEs werden alle {0} Fahrzeuge aufgelistet:\n", CountFahrzeuge(alleFahrzeuge));
@@ -86,41 +88,47 @@ namespace Fuhrparkverwaltung
             //Steuerschuld PKW
             foreach (PKW fahrzeug in alleFahrzeuge.OfType<PKW>())
             {
-                //Schadstoffklassenkosten
-                if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Schadstoffarm)
-                {
-                    SchadstoffklassenKosten = 0;
-                }
-                if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Normal)
-                {
-                    SchadstoffklassenKosten = 1;
-                }
-                if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Diesel)
-                {
-                    SchadstoffklassenKosten = 2;
-                }
 
-                EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 10 * (SchadstoffklassenKosten + 1);
-                Steuerschuld = Steuerschuld + EineSteuerschuld;
-                EineSteuerschuld = 0;
-                Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+                fahrzeug.SteuerschuldfürKennzeichen();
+                //Schadstoffklassenkosten
+                //if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Schadstoffarm)
+                //{
+                //    SchadstoffklassenKosten = 0;
+                //}
+                //if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Normal)
+                //{
+                //    SchadstoffklassenKosten = 1;
+                //}
+                //if (fahrzeug.Schadstoffklasse == Schadstoffklasse.Diesel)
+                //{
+                //    SchadstoffklassenKosten = 2;
+                //}
+
+                //EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 10 * (SchadstoffklassenKosten + 1);
+                //Steuerschuld = Steuerschuld + EineSteuerschuld;
+                //EineSteuerschuld = 0;
+                //Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
             }
 
             foreach (LKW fahrzeug in alleFahrzeuge.OfType<LKW>())
             {
-                EineSteuerschuld = fahrzeug.ZuladungInTonnen * 100 / 1000;
 
-                Steuerschuld = Steuerschuld + EineSteuerschuld;
-                EineSteuerschuld = 0;
-                Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+                fahrzeug.SteuerschuldfürKennzeichen();
+                //EineSteuerschuld = fahrzeug.ZuladungInTonnen * 100 / 1000;
+
+                //Steuerschuld = Steuerschuld + EineSteuerschuld;
+                //EineSteuerschuld = 0;
+                //Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
             }
 
             foreach (Motorräder fahrzeug in alleFahrzeuge.OfType<Motorräder>())
             {
-                EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 20;
-                Steuerschuld = Steuerschuld + EineSteuerschuld;
-                EineSteuerschuld = 0;
-                Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
+
+                fahrzeug.SteuerschuldfürKennzeichen();
+                //EineSteuerschuld = (fahrzeug.Hubraum + 99) / 100 * 20;
+                //Steuerschuld = Steuerschuld + EineSteuerschuld;
+                //EineSteuerschuld = 0;
+                //Console.WriteLine("Die Steuerschuld beträgt: {0}", Steuerschuld);
             }
 
 
@@ -130,12 +138,15 @@ namespace Fuhrparkverwaltung
 
         public static void SteuerschuldfürKennzeichen(List<Fahrzeug> alleFahrzeuge, string kennzeichen)
         {
-
+            
             foreach (Fahrzeug fahrzeug in alleFahrzeuge)
             {
                 if (fahrzeug.Kennzeichen == kennzeichen)
                 {
-                    Verwaltung.BerechneSteuerschuld(alleFahrzeuge);
+
+
+                    fahrzeug.SteuerschuldfürKennzeichen();
+                        //Verwaltung.BerechneSteuerschuld(alleFahrzeuge);
                 }
             }
         }

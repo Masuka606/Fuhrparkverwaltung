@@ -26,6 +26,21 @@ namespace Fuhrparkverwaltung
             Console.WriteLine("Anzahl der Achsen: \t{0}\nZuladung in Tonnen: \t{1}\n", this.anzahlAchsen, this.zuladungInTonnen);
         }
 
+        public override void SteuerschuldfürKennzeichen()
+        {
+            base.SteuerschuldfürKennzeichen();
+
+            double Steuerschuld = 0;
+            double EineSteuerschuld = 0;
+            int SchadstoffklassenKosten = 0;
+
+            EineSteuerschuld = this.ZuladungInTonnen * 100 ;
+
+            Steuerschuld = Steuerschuld + EineSteuerschuld;
+            EineSteuerschuld = 0;
+            Console.WriteLine("Kennzeichen: {0} \t\tDie Steuerschuld beträgt: {1}\n", this.Kennzeichen, Steuerschuld);
+        }
+
         //Getter & Setter
         public int AnzahlAchsen { get => anzahlAchsen; set => anzahlAchsen = value; }
         public float ZuladungInTonnen { get => zuladungInTonnen; set => zuladungInTonnen = value; }
