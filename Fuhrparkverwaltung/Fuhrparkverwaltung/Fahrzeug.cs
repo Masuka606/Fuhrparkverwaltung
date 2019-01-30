@@ -11,12 +11,12 @@ namespace Fuhrparkverwaltung
 
         //Klasse Fahrzeug, hier werden erstmal für alle benötigten Werte sowie Funktionen benötigt
         //Private Methoden
-        private string hersteller;
+        private string ;
         private string modell;
-        private string kennzeichen;
+        private string ;
         private DateTime jahrDerErstzulassung;
         private float anschaffungspreis;
-        private int stellplatz;
+        private int 
 
         //Konstruktor 
         public Fahrzeug(string hersteller, string modell, string kennzeichen, DateTime jahrDerErstzulassung, float anschaffungspreis, int stellplatz)
